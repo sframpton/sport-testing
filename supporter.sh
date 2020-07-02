@@ -1,15 +1,17 @@
 
 # !/bin/bash 
 
-"$1" == $club
-"$2" == $message
-
-if [ "$1" == "" ]; then
-    echo ERROR: "Missing param - must supply two params for this script to work"
-elif [ "$2" == "" ]; then
-    echo ERROR: "Missing param - must supply two params for this script to work"
+if [ "$1" != "" ]; then
+    club=$1
 else
-    echo ERROR: "Something went wrong!"
+    echo ERROR: "Missing two params - Must supply two params"
+    exit 1
+fi
+
+if [ "$2" != "" ]; then
+    message=$2
+else
+    echo ERROR: "Missing second param - Must supply two params"
     exit 1
 fi
 
