@@ -15,4 +15,4 @@ else
     exit 1
 fi
 
-echo "${club}: ${message}"
+echo "${CLUB}: ${MESSAGE}"
